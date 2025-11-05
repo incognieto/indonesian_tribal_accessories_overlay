@@ -755,7 +755,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, issues, or collaboration:
 - **GitHub Issues**: [Open an issue](https://github.com/yourusername/cv_accessory_overlay/issues)
-- **Email**: your.email@example.com
+- **Email**: nieto.salim.tif423@polban.ac.id
 
 ---
 
@@ -765,10 +765,10 @@ If you use this project in your research, please cite:
 
 ```bibtex
 @software{cv_accessory_overlay,
-  author = {Your Name},
+  author = {Nieto SM, Farras AR, Satria PS},
   title = {CV Accessory Overlay: Hybrid Haar + SVM Face Detector},
   year = {2025},
-  url = {https://github.com/yourusername/cv_accessory_overlay}
+  url = {https://github.com/incognieto/indonesian_tribal_accessories_overlay}
 }
 ```
 
