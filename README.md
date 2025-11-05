@@ -189,25 +189,10 @@ assets/
 
 ### Running the System
 
-#### **Method 1: Using Batch/Shell Scripts (Recommended)**
-
-**Windows:**
-```cmd
-cd example_gui_godot
-run_udp_overlay_server.bat
-```
-
-**Linux/Mac:**
-```bash
-cd example_gui_godot
-chmod +x run_udp_overlay_server.sh
-./run_udp_overlay_server.sh
-```
-
-#### **Method 2: Manual Python Command**
+#### **Method 1: Manual Python Command**
 
 ```bash
-cd example_gui_godot
+cd indonesian_tribal_accessories_overlay
 python udp_webcam_overlay_server.py --load-samples
 ```
 
@@ -219,7 +204,7 @@ python udp_webcam_overlay_server.py --load-samples
 - `--use-svm` - Enable SVM validation (slower but more accurate)
 - `--no-boxes` - Start with bounding boxes disabled
 
-**Example with custom settings:**
+**Example with custom settings (Opsional):**
 ```bash
 python udp_webcam_overlay_server.py \
   --host 0.0.0.0 \
@@ -233,7 +218,7 @@ python udp_webcam_overlay_server.py \
 1. Open **Godot Engine 4.x**
 2. Click **"Import"** and select `example_gui_godot/` folder
 3. Open the project
-4. Run scene: **`UDPAccessoryOverlayScene.tscn`**
+4. Run scene: **`MainMenuScene.tscn`**
 5. Click **"Start UDP Receiver"** button
 6. Webcam feed with overlays should appear!
 
@@ -254,7 +239,7 @@ The system includes **5 predefined accessory packages**, each with different col
 | Package | Name | Hat | Earrings | Piercing | Theme |
 |---------|------|-----|----------|----------|-------|
 | **1** | Asmat | Red | Gold | Silver | Classic elegant |
-| **2** | Blue & Silver | Blue | Silver | Blue | Cool modern |
+| **2** | Gayo | Blue | Silver | Blue | Cool modern |
 | **3** | Jawa | Green | Diamond | Green | Fresh natural |
 | **4** | Minang | Pink | Pink | Pink | Cute playful |
 | **5** | Bugis | Yellow | Red+Blue | Black | Bold colorful |

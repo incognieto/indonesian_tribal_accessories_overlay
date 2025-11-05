@@ -59,9 +59,9 @@ class UDPWebcamOverlayServer:
         self.current_package = 1  # Current active package
         self.inference_pipeline = None
         
-    def initialize_face_detection(self, cascade_dir='../assets/cascades', 
-                                   models_dir='../models',
-                                   config_path='../assets/overlay_config.json',
+    def initialize_face_detection(self, cascade_dir='assets/cascades', 
+                                   models_dir='models',
+                                   config_path='assets/overlay_config.json',
                                    accessories_config=None):
         """Initialize face detection and overlay system."""
         print("\n🎭 Initializing Face Detection & Overlay System...")
@@ -106,7 +106,7 @@ class UDPWebcamOverlayServer:
             # Load ALL accessory variants if overlay enabled
             if self.use_overlay:
                 print("🎨 Loading all accessory variants...")
-                variants_dir = Path('../assets/variants')
+                variants_dir = Path('assets/variants')
                 
                 if not variants_dir.exists():
                     print(f"⚠️ Variants directory not found: {variants_dir}")
@@ -735,9 +735,9 @@ def main():
     parser.add_argument('--no-boxes', action='store_true', help='Disable bounding boxes')
     
     # Paths
-    parser.add_argument('--cascade-dir', default='../assets/cascades', help='Haar cascades directory')
-    parser.add_argument('--models-dir', default='../models', help='Models directory (for SVM)')
-    parser.add_argument('--config', default='../assets/overlay_config.json', help='Overlay config file')
+    parser.add_argument('--cascade-dir', default='assets/cascades', help='Haar cascades directory')
+    parser.add_argument('--models-dir', default='models', help='Models directory (for SVM)')
+    parser.add_argument('--config', default='assets/overlay_config.json', help='Overlay config file')
     
     # Accessories
     parser.add_argument('--hat', help='Hat accessory image path')
@@ -782,7 +782,7 @@ def main():
         
         # Or load samples
         if args.load_samples:
-            variants_dir = Path('../assets/variants')
+            variants_dir = Path('assets/variants')
             if variants_dir.exists():
                 # Use first available variant for each accessory type
                 import glob
