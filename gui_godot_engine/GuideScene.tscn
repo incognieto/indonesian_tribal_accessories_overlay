@@ -1,0 +1,274 @@
+[gd_scene load_steps=3 format=3 uid="uid://bckaismodt3rl"]
+
+[ext_resource type="Script" uid="uid://c4curmj76pwob" path="res://GuideScene.gd" id="1_guide"]
+[ext_resource type="Texture2D" uid="uid://kqkmqom6oajq" path="res://Assets/3.png" id="2_44ces"]
+
+[node name="GuideScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-688, -367)
+script = ExtResource("1_guide")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_44ces")
+
+[node name="Title" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "User Guide"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 75.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "How to use the Accessory Overlay System"
+horizontal_alignment = 1
+
+[node name="LeftPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 110.0
+offset_right = 566.0
+offset_bottom = 560.0
+
+[node name="LeftScroll" type="ScrollContainer" parent="LeftPanel"]
+layout_mode = 2
+
+[node name="LeftContent" type="VBoxContainer" parent="LeftPanel/LeftScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Spacer1" type="Control" parent="LeftPanel/LeftScroll/LeftContent"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Section1" type="VBoxContainer" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading1" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Getting Started"
+horizontal_alignment = 1
+
+[node name="Text1" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "1. Pastikan server Python sudah berjalan: python udp_webcam_overlay_server.py
+2. Klik 'Start Detection' di Main Menu
+3. Klik 'Start UDP Receiver' untuk connect"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator1" type="HSeparator" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+
+[node name="Section2" type="VBoxContainer" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading2" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Accessory Packages"
+horizontal_alignment = 1
+
+[node name="Text2" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Ada 5 paket aksesoris yang bisa dipilih:
+
+Package 1: Red & Gold (Classic elegant)
+Package 2: Blue & Silver (Cool modern)
+Package 3: Green & Diamond (Fresh natural)
+Package 4: Pink & Purple (Cute playful)
+Package 5: Rainbow Mix (Bold colorful)
+
+Klik tombol package untuk mengganti style
+secara real-time!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator2" type="HSeparator" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+
+[node name="Section3" type="VBoxContainer" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading3" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Mirror Mode"
+horizontal_alignment = 1
+
+[node name="Text3" type="Label" parent="LeftPanel/LeftScroll/LeftContent/Section3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Kamera menggunakan mirror mode (flip
+horizontal) untuk tampilan selfie yang natural,
+seperti di smartphone.
+
+Gerakan tangan kanan akan tampil di kiri layar
+(efek cermin)."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="LeftPanel/LeftScroll/LeftContent"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RightPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -562.0
+offset_top = 110.0
+offset_right = -62.0
+offset_bottom = 560.0
+
+[node name="RightScroll" type="ScrollContainer" parent="RightPanel"]
+layout_mode = 2
+
+[node name="RightContent" type="VBoxContainer" parent="RightPanel/RightScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="Spacer1" type="Control" parent="RightPanel/RightScroll/RightContent"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Section4" type="VBoxContainer" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading4" type="Label" parent="RightPanel/RightScroll/RightContent/Section4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Tips & Tricks"
+horizontal_alignment = 1
+
+[node name="Text4" type="Label" parent="RightPanel/RightScroll/RightContent/Section4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "(1) Gunakan pencahayaan yang cukup untuk deteksi optimal
+(2) Posisikan wajah menghadap kamera langsung
+(3) Jarak ideal: 50-100 cm dari kamera
+(4) Coba berbagai package untuk style berbeda!
+(5) Lihat nomor package aktif di pojok video
+(6) Bounding box hijau menunjukkan wajah terdeteksi"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator1" type="HSeparator" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+
+[node name="Section5" type="VBoxContainer" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading5" type="Label" parent="RightPanel/RightScroll/RightContent/Section5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Technical Info"
+horizontal_alignment = 1
+
+[node name="Text5" type="Label" parent="RightPanel/RightScroll/RightContent/Section5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Protocol: UDP (Port 8888)
+Resolution: 480x360 pixels
+Frame Rate: 15 FPS target
+Compression: JPEG Quality 40
+Detection: Haar Cascade Multi-face
+Overlay: Real-time alpha blending
+Latency: < 100ms (local network)
+Max Packet: 32KB per frame"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator2" type="HSeparator" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+
+[node name="Section6" type="VBoxContainer" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading6" type="Label" parent="RightPanel/RightScroll/RightContent/Section6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "🛠️ Troubleshooting"
+horizontal_alignment = 1
+
+[node name="Text6" type="Label" parent="RightPanel/RightScroll/RightContent/Section6"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "Problem: Tidak bisa connect ke server
+→ Pastikan server Python sudah running
+→ Check port 8888 tidak dipakai app lain
+
+Problem: FPS rendah atau lag
+→ Tutup aplikasi berat lainnya
+→ Kurangi jarak dari kamera
+
+Problem: Wajah tidak terdeteksi
+→ Tingkatkan pencahayaan ruangan
+→ Posisi wajah lebih dekat ke kamera
+→ Hadapkan wajah langsung ke kamera"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="RightPanel/RightScroll/RightContent"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 910.0
+offset_top = -70.0
+offset_right = 1090.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "⬅️ Back to Menu"

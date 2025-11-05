@@ -1,0 +1,614 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5cuvqpbwwbro"]
+
+[ext_resource type="Script" uid="uid://b776lhqoa3uo3" path="res://UDPAccessoryOverlayController.gd" id="1_controller"]
+[ext_resource type="Texture2D" uid="uid://651bq7lj0viw" path="res://Assets/4.png" id="2_c7oj8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7oj8"]
+bg_color = Color(0.138598, 0.28334, 0.210694, 1)
+
+[node name="UDPAccessoryOverlayUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_controller")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_c7oj8")
+
+[node name="TitleLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 20.0
+offset_right = 400.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "CV Accessory Overlay System (UDP)"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 65.0
+offset_right = 500.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "AI-Powered Face Detection with Real-time Overlay - UDP Fast Streaming"
+horizontal_alignment = 1
+
+[node name="WebcamPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -203.0
+offset_right = 320.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WebcamFeed" type="TextureRect" parent="WebcamPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="WebcamPanel/WebcamFeed"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -15.0
+offset_right = 200.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+text = "Menginisialisasi UDP..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FPSLabel" type="Label" parent="WebcamPanel/WebcamFeed"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 35.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 1, 0.5, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 14
+text = "FPS: --"
+horizontal_alignment = 2
+
+[node name="StatsLabel" type="Label" parent="WebcamPanel/WebcamFeed"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -30.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "UDP: Ready"
+horizontal_alignment = 2
+
+[node name="AccessoryPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 120.0
+offset_right = 287.0
+offset_bottom = 341.0
+
+[node name="AccessoryTitle" type="Label" parent="AccessoryPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 285.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "UDP Streaming Info"
+
+[node name="AccessoryInfo" type="Label" parent="AccessoryPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 50.0
+offset_right = 239.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 12
+text = "UDP mode provides:
+• Lower latency
+• Higher frame rates
+• Packet loss tolerance
+• Real-time performance
+
+Configure accessories in Python server."
+autowrap_mode = 3
+
+[node name="ButtonsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1116.0
+offset_top = 353.0
+offset_right = -866.0
+offset_bottom = 596.0
+grow_horizontal = 0
+
+[node name="ButtonsTitle" type="Label" parent="ButtonsPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 235.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "UDP Connection"
+
+[node name="ConnectButton" type="Button" parent="ButtonsPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 55.0
+offset_right = 235.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 16
+text = "Start UDP Receiver"
+
+[node name="DisconnectButton" type="Button" parent="ButtonsPanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 110.0
+offset_right = 235.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 16
+text = "Stop Receiver"
+
+[node name="ServerInfo" type="Label" parent="ButtonsPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 162.0
+offset_right = 236.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 11
+text = "Server: 127.0.0.1:8888
+Protocol: UDP
+Format: Packetized JPEG
+Max Packet: 32KB"
+autowrap_mode = 3
+
+[node name="PackagePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 906.0
+offset_top = -528.0
+offset_right = 1135.0
+offset_bottom = -59.0
+grow_vertical = 0
+
+[node name="PackageTitle" type="Label" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 10.0
+offset_right = 250.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Accessory Packages"
+
+[node name="PackageDesc" type="Label" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 40.0
+offset_right = 250.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 11
+text = "Choose a preset combination"
+
+[node name="Package1Button" type="Button" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 75.0
+offset_right = 195.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 13
+text = "Suku Asmat (Hat + Piercing + Earring)"
+autowrap_mode = 2
+
+[node name="Package2Button" type="Button" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 150.0
+offset_right = 196.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 13
+text = "Suku Gayo (Hat Only)"
+autowrap_mode = 2
+
+[node name="Package3Button" type="Button" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 225.0
+offset_right = 195.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 13
+text = "Suku Jawa (Hat + Earring)"
+autowrap_mode = 2
+
+[node name="Package4Button" type="Button" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 300.0
+offset_right = 195.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 13
+text = "Suku Minang (Hat + Earring)"
+autowrap_mode = 2
+
+[node name="Package5Button" type="Button" parent="PackagePanel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 375.0
+offset_right = 195.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 13
+text = "Suku Bugis (Hat + Earring)"
+autowrap_mode = 2
+
+[node name="InfoLabel" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -25.0
+offset_right = 400.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 12
+text = "UDP Streaming - Fast & Efficient | Accessory Detection"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 180.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 16
+text = "⬅️ Back to Menu"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 180.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 16
+text = "⚙️ Settings"
+
+[node name="AccessorySettingsPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 15.0
+offset_right = 784.0
+offset_bottom = 615.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7oj8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AccessorySettingsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "⚙️ Accessory Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="AccessorySettingsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AccessorySettingsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SettingsContent" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CascadeSection" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="CascadeTitle" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/CascadeSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.5, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Face Detection Model"
+
+[node name="CascadeLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/CascadeSection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Select Haar Cascade:"
+
+[node name="CascadeOptionButton" type="OptionButton" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/CascadeSection"]
+layout_mode = 2
+
+[node name="CascadeDesc" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/CascadeSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 10
+text = "Current: my_custom_face_cascade.xml"
+autowrap_mode = 3
+
+[node name="HSeparator_Cascade" type="HSeparator" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/CascadeSection"]
+layout_mode = 2
+
+[node name="HatSection" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="HatTitle" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Hat (Topi)"
+
+[node name="HatScaleContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+
+[node name="HatScaleLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale:"
+
+[node name="HatScaleValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "1.20"
+
+[node name="HatScaleSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.01
+value = 1.2
+
+[node name="HatYOffsetContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+
+[node name="HatYOffsetLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset:"
+
+[node name="HatYOffsetValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "-0.25"
+
+[node name="HatYOffsetSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+step = 0.01
+value = -0.25
+
+[node name="HSeparator2" type="HSeparator" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="EarringSection" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="EarringTitle" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Earrings (Anting)"
+
+[node name="EarringScaleContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+
+[node name="EarringScaleLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale:"
+
+[node name="EarringScaleValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.90"
+
+[node name="EarringScaleSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+min_value = 0.5
+max_value = 3.0
+step = 0.01
+value = 0.9
+
+[node name="EarringYOffsetContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+
+[node name="EarringYOffsetLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset:"
+
+[node name="EarringYOffsetValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.65"
+
+[node name="EarringYOffsetSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+min_value = 0.3
+max_value = 0.9
+step = 0.01
+value = 0.65
+
+[node name="HSeparator3" type="HSeparator" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="PiercingSection" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="PiercingTitle" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Piercing"
+
+[node name="PiercingScaleContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+
+[node name="PiercingScaleLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale:"
+
+[node name="PiercingScaleValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "1.00"
+
+[node name="PiercingScaleSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+min_value = 0.5
+max_value = 3.0
+step = 0.01
+value = 1.0
+
+[node name="PiercingYOffsetContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+
+[node name="PiercingYOffsetLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset:"
+
+[node name="PiercingYOffsetValue" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.58"
+
+[node name="PiercingYOffsetSlider" type="HSlider" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+min_value = 0.3
+max_value = 0.8
+step = 0.01
+value = 0.58
+
+[node name="HSeparator4" type="HSeparator" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="DebugSection" type="VBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="DebugTitle" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/DebugSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Debug Options"
+
+[node name="BoundingBoxContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/DebugSection"]
+layout_mode = 2
+
+[node name="BoundingBoxLabel" type="Label" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/DebugSection/BoundingBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Show Bounding Box:"
+
+[node name="BoundingBoxCheckBox" type="CheckBox" parent="AccessorySettingsPanel/VBoxContainer/ScrollContainer/SettingsContent/DebugSection/BoundingBoxContainer"]
+layout_mode = 2
+text = "Enable"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="AccessorySettingsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ApplyButton" type="Button" parent="AccessorySettingsPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Apply"
+
+[node name="ResetButton" type="Button" parent="AccessorySettingsPanel/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Reset to Default"
+
+[node name="CloseButton" type="Button" parent="AccessorySettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "✖️ Close"

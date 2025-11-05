@@ -1,0 +1,60 @@
+{
+  "hat": {
+    "scale_factor": 1.2,
+    "y_offset_factor": 0.5,
+    "rotation_enabled": true,
+    "anchor": "bottom_center"
+  },
+  "earring_left": {
+    "x_offset_factor": -0.45,
+    "y_offset_factor": 0.65,
+    "scale_factor": 0.9,
+    "anchor": "top_center"
+  },
+  "earring_right": {
+    "x_offset_factor": 0.45,
+    "y_offset_factor": 0.65,
+    "scale_factor": 0.9,
+    "anchor": "top_center"
+  },
+  "piercing_nose": {
+    "x_offset_factor": 0.05,
+    "y_offset_factor": 0.58,
+    "scale_factor": 1.0,
+    "anchor": "center"
+  },
+  "tattoo_face": {
+    "x_offset_factor": 0.35,
+    "y_offset_factor": 0.65,
+    "scale_factor": 0.2,
+    "opacity": 0.8,
+    "anchor": "center"
+  },
+  "tattoo_skin": {
+    "x_offset_factor": 0.0,
+    "y_offset_factor": 0.3,
+    "scale_factor": 0.25,
+    "opacity": 0.75,
+    "anchor": "center"
+  },
+  "nms": {
+    "iou_threshold": 0.3
+  },
+  "haar": {
+    "face": {
+      "scaleFactor": 1.1,
+      "minNeighbors": 5,
+      "minSize": [30, 30]
+    },
+    "eye": {
+      "scaleFactor": 1.05,
+      "minNeighbors": 6,
+      "minSize": [20, 20]
+    },
+    "nose": {
+      "scaleFactor": 1.1,
+      "minNeighbors": 4,
+      "minSize": [15, 15]
+    }
+  }
+}

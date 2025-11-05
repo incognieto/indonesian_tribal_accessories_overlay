@@ -1,0 +1,28 @@
+# Core dependencies for CV Accessory Overlay System
+# Python 3.10+
+
+# Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+
+# Scientific Computing
+numpy>=1.24.0
+scikit-learn>=1.3.0
+scikit-image>=0.21.0
+
+# Model Persistence
+joblib>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Progress & CLI
+tqdm>=4.65.0
+
+# Configuration
+pyyaml>=6.0
+
+# Optional: ONNX export (stretch)
+# skl2onnx>=1.15.0
+# onnx>=1.14.0
+# onnxruntime>=1.15.0

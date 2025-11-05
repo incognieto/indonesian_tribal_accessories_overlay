@@ -1,0 +1,278 @@
+[gd_scene load_steps=2 format=3 uid="uid://brij8wwrfmcn5"]
+
+[ext_resource type="Script" uid="uid://37dq0nadqh85" path="res://AccessorySettingsPanel.gd" id="1_settings"]
+
+[node name="AccessorySettingsPanel" type="Panel"]
+offset_left = 384.0
+offset_top = 15.0
+offset_right = 784.0
+offset_bottom = 615.0
+script = ExtResource("1_settings")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "⚙️ Accessory Settings"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SettingsContent" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HatSection" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="HatTitle" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "🎩 HAT (Topi)"
+
+[node name="HatScaleContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+
+[node name="HatScaleLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale (Ukuran):"
+
+[node name="HatScaleValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "1.20"
+
+[node name="HatScaleSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.01
+value = 1.2
+
+[node name="HatYOffsetContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+
+[node name="HatYOffsetLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset (Ketinggian):"
+
+[node name="HatYOffsetValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection/HatYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "-0.25"
+
+[node name="HatYOffsetSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+step = 0.01
+value = -0.25
+
+[node name="HatRotationToggle" type="CheckButton" parent="VBoxContainer/ScrollContainer/SettingsContent/HatSection"]
+layout_mode = 2
+button_pressed = true
+text = "Enable Rotation (Rotasi Otomatis)"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="EarringSection" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="EarringTitle" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "💎 EARRINGS (Anting)"
+
+[node name="EarringScaleContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+
+[node name="EarringScaleLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale (Ukuran):"
+
+[node name="EarringScaleValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.15"
+
+[node name="EarringScaleSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+min_value = 0.05
+max_value = 0.5
+step = 0.01
+value = 0.15
+
+[node name="EarringXOffsetContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+
+[node name="EarringXOffsetLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringXOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "X Offset (Posisi Horizontal):"
+
+[node name="EarringXOffsetValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringXOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.45"
+
+[node name="EarringXOffsetSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+min_value = 0.2
+max_value = 0.6
+step = 0.01
+value = 0.45
+
+[node name="EarringYOffsetContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+
+[node name="EarringYOffsetLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset (Posisi Vertikal):"
+
+[node name="EarringYOffsetValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection/EarringYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.65"
+
+[node name="EarringYOffsetSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/EarringSection"]
+layout_mode = 2
+min_value = 0.3
+max_value = 0.9
+step = 0.01
+value = 0.65
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="PiercingSection" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="PiercingTitle" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "👃 PIERCING (Tindik Hidung)"
+
+[node name="PiercingScaleContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+
+[node name="PiercingScaleLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingScaleContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Scale (Ukuran):"
+
+[node name="PiercingScaleValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingScaleContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.08"
+
+[node name="PiercingScaleSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+min_value = 0.03
+max_value = 0.2
+step = 0.01
+value = 0.08
+
+[node name="PiercingXOffsetContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+
+[node name="PiercingXOffsetLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingXOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "X Offset (Posisi Horizontal):"
+
+[node name="PiercingXOffsetValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingXOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.05"
+
+[node name="PiercingXOffsetSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+min_value = -0.2
+max_value = 0.3
+step = 0.01
+value = 0.05
+
+[node name="PiercingYOffsetContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+
+[node name="PiercingYOffsetLabel" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingYOffsetContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+text = "Y Offset (Posisi Vertikal):"
+
+[node name="PiercingYOffsetValue" type="Label" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection/PiercingYOffsetContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "0.58"
+
+[node name="PiercingYOffsetSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/SettingsContent/PiercingSection"]
+layout_mode = 2
+min_value = 0.3
+max_value = 0.8
+step = 0.01
+value = 0.58
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer/ScrollContainer/SettingsContent"]
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ApplyButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "✅ Apply Settings"
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "🔄 Reset to Default"
+
+[node name="CloseButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "✖️ Close"

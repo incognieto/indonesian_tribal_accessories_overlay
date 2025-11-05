@@ -1,0 +1,221 @@
+[gd_scene load_steps=3 format=3 uid="uid://c35qdpmh7x4s"]
+
+[ext_resource type="Script" uid="uid://b83vghxwwmeoq" path="res://CreditScene.gd" id="1_credit"]
+[ext_resource type="Texture2D" uid="uid://cjwj3bomr1yg4" path="res://Assets/2.png" id="2_swha8"]
+
+[node name="CreditScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_credit")
+
+[node name="Background2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_swha8")
+
+[node name="Title" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 75.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "CV Accessory Overlay System"
+horizontal_alignment = 1
+
+[node name="LeftPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 110.0
+offset_right = 490.0
+offset_bottom = 560.0
+
+[node name="LeftScroll" type="ScrollContainer" parent="LeftPanel"]
+layout_mode = 2
+
+[node name="LeftContent" type="VBoxContainer" parent="LeftPanel/LeftScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="Spacer1" type="Control" parent="LeftPanel/LeftScroll/LeftContent"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="DeveloperSection" type="VBoxContainer" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DevHeading" type="Label" parent="LeftPanel/LeftScroll/LeftContent/DeveloperSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Developed By"
+horizontal_alignment = 1
+
+[node name="DevName" type="Label" parent="LeftPanel/LeftScroll/LeftContent/DeveloperSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "Farras Ahmad Rasyid (231524006)
+Nieto Salim Maula (231524019)
+Satria Permata Sejati (231524026)"
+horizontal_alignment = 1
+
+[node name="DevInfo" type="Label" parent="LeftPanel/LeftScroll/LeftContent/DeveloperSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 13
+text = "Politeknik Negeri Bandung
+Pengolahan Citra Digital - Semester 5"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator1" type="HSeparator" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+
+[node name="SpecialThanks" type="VBoxContainer" parent="LeftPanel/LeftScroll/LeftContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ThanksHeading" type="Label" parent="LeftPanel/LeftScroll/LeftContent/SpecialThanks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Special Thanks"
+horizontal_alignment = 1
+
+[node name="ThanksList" type="Label" parent="LeftPanel/LeftScroll/LeftContent/SpecialThanks"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 15
+text = "Dosen Pengampu Mata Kuliah PCD
+OpenCV Community
+Godot Engine Community
+GitHub Copilot AI Assistant
+Contributors
+Open Source Community"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="LeftPanel/LeftScroll/LeftContent"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="RightPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -492.0
+offset_top = 110.0
+offset_right = -42.0
+offset_bottom = 560.0
+grow_horizontal = 0
+
+[node name="RightScroll" type="ScrollContainer" parent="RightPanel"]
+layout_mode = 2
+
+[node name="RightContent" type="VBoxContainer" parent="RightPanel/RightScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="Spacer1" type="Control" parent="RightPanel/RightScroll/RightContent"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="TechnologySection" type="VBoxContainer" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TechHeading" type="Label" parent="RightPanel/RightScroll/RightContent/TechnologySection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Technologies Used"
+horizontal_alignment = 1
+
+[node name="TechList" type="Label" parent="RightPanel/RightScroll/RightContent/TechnologySection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 15
+text = "Python 3.8+ with OpenCV 4.12
+Haar Cascade Multi-face Detection
+ORB + BoVW + SVM Validation
+Real-time Alpha Blending
+Godot Engine 4.x (GDScript)
+UDP Network Protocol
+JPEG Compression & Streaming
+NumPy & Scikit-learn"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Separator1" type="HSeparator" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+
+[node name="FeaturesSection" type="VBoxContainer" parent="RightPanel/RightScroll/RightContent"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="FeaturesHeading" type="Label" parent="RightPanel/RightScroll/RightContent/FeaturesSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Key Features"
+horizontal_alignment = 1
+
+[node name="FeaturesList" type="Label" parent="RightPanel/RightScroll/RightContent/FeaturesSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 15
+text = "Multi-face detection with NMS
+5 preset accessory packages
+Real-time package switching
+Mirror mode for natural selfie view
+Auto-load all accessory variants
+Low-latency UDP streaming
+Multi-platform support
+Bounding box visualization"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="RightPanel/RightScroll/RightContent"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 932.0
+offset_top = -70.0
+offset_right = 1112.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "⬅️ Back to Menu"
