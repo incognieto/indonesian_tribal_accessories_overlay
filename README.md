@@ -137,8 +137,8 @@ Webcam Frame (BGR)
 ### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/cv_accessory_overlay.git
-cd cv_accessory_overlay
+git clone https://github.com/incognieto/indonesian_tribal_accessories_overlay.git
+cd indonesian_tribal_accessories_overlay
 ```
 
 ### Step 2: Install Python Dependencies
