@@ -1,8 +1,8 @@
 # CV Accessory Overlay 🎩👂💎
 
-**Real-time Face Detection & Accessory Overlay System with UDP Streaming & Godot GUI**
+**Real-time Face Detection & Indonesian Tribal Accessory Overlay System with UDP Streaming & Godot GUI**
 
-A classical computer vision system that combines custom-trained Haar Cascade face detection with real-time accessory overlay capabilities. Features UDP streaming protocol for low-latency performance and interactive Godot-based GUI for package selection and live parameter adjustment.
+A classical computer vision system that combines custom-trained Haar Cascade face detection with real-time Indonesian Tribal accessory overlay capabilities. Features UDP streaming protocol for low-latency performance and interactive Godot-based GUI for package selection and live parameter adjustment.
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.8+-green.svg)
@@ -216,11 +216,12 @@ python udp_webcam_overlay_server.py \
 ### Launching Godot Client
 
 1. Open **Godot Engine 4.x**
-2. Click **"Import"** and select `example_gui_godot/` folder
+2. Click **"Import"** and select `gui_godot_engine/` folder
 3. Open the project
 4. Run scene: **`MainMenuScene.tscn`**
-5. Click **"Start UDP Receiver"** button
-6. Webcam feed with overlays should appear!
+5. Choose **"Start Detection"**
+6. Click **"Start UDP Receiver"** button
+7. Webcam feed with overlays should appear!
 
 ### First-Time Usage
 
@@ -653,12 +654,27 @@ result = alpha * overlay_rgb + (1 - alpha) * background_rgb
 ## 📂 Project Structure
 
 ```
-cv_accessory_overlay/
+indonesian_tribal_accessories_overlay/
 ├── app.py                          # Main CLI application
 ├── requirements.txt                # Python dependencies
 ├── LICENSE                         # MIT License
 ├── README.md                       # This file
 ├── .gitignore                      # Git ignore rules
+│
+├── gui_godot_engine/               # Core GUI
+│   ├── AccessorySettingsPanel.gd
+│   ├── AccessorySettingsPanel.tscn 
+│   ├── CreditScene.gd 
+│   ├── GuideScene.gd
+│   ├── CreditScene.tscn 
+│   ├── GuideScene.tscn
+│   ├── MainMenu.gd
+│   ├── MainMenuScene.tscn
+│   ├── UDPAccessoryOverlayController.gd
+│   ├── UDPAccessoryOverlayScene.gd
+│   ├── UDPAccessoryWebcamManager.gd
+│   ├── UDPAccessoryOverlayScene.tscn
+│   └── project.godot                    # Godot Execution
 │
 ├── pipelines/                      # Core pipeline modules
 │   ├── __init__.py
@@ -670,43 +686,13 @@ cv_accessory_overlay/
 │   ├── geometry.py                 # Landmark estimation, rotation
 │   └── utils.py                    # I/O, visualization, NMS
 │
-├── assets/                         # Accessory images & config
-│   ├── cascades/                   # Haar cascade XML files
-│   │   ├── haarcascade_frontalface_default.xml
-│   │   ├── haarcascade_frontalface_alt.xml
-│   │   ├── haarcascade_eye.xml
-│   │   └── ...
-│   ├── hat.png
-│   ├── earring_left.png
-│   ├── earring_right.png
-│   ├── piercing_nose.png
-│   ├── tattoo_face.png
-│   ├── tattoo_skin.png
-│   └── overlay_config.json         # Overlay parameters
-│
-├── models/                         # Trained models (gitignored)
-│   ├── codebook.pkl                # BoVW k-means codebook
-│   ├── scaler.pkl                  # StandardScaler
-│   ├── svm_face_linear.pkl         # LinearSVC model
-│   ├── svm_face_rbf.pkl            # RBF SVM model (optional)
-│   ├── feature_config.json         # Feature extraction config
-│   └── splits.json                 # Train/val/test split indices
-│
-├── data/                           # Training data (gitignored)
-│   ├── faces_pos/                  # Positive samples
-│   ├── faces_neg/                  # Negative samples
-│   ├── ear_pos_left/               # (Optional) Ear samples
-│   ├── ear_pos_right/
-│   └── skin_bg/                    # (Optional) Skin backgrounds
-│
-├── reports/                        # Evaluation outputs (gitignored)
-│   ├── test_metrics.json           # Accuracy, precision, recall, F1
-│   ├── test_confusion_matrix.png
-│   ├── test_pr_curve.png
-│   └── test_roc_curve.png
-│
-└── notebooks/                      # Jupyter notebooks
-    └── EDA.ipynb                   # Exploratory data analysis
+└── assets/                         # Accessory images & config
+    ├── cascades/                   # Haar cascade XML files
+    │   ├── haarcascade_frontalface_default.xml
+    │   ├── haarcascade_frontalface_alt.xml
+    │   ├── haarcascade_eye.xml
+    │   └── ...
+    └── overlay_config.json         # Overlay parameters
 ```
 
 ---
